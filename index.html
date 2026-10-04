@@ -1,0 +1,330 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Reštaurácia Čárda · obedové menu a oslavy v Košiciach — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh homepage pre Reštauráciu Čárda, Timonova 7, Košice — denné obedové menu, take away, stravenky, rodinné a firemné oslavy.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dym:#1d130d; --dym2:#2a1b12; --vapno:#eeede9; --vapno2:#e3e1db;
+  --text:#22160f; --mute:#6a5a4f;
+  --paprika:#b81e14; --chili:#7c140e; --spagat:#c8a46a; --stopka:#5f6b2e;
+  --doska1:#71482b; --doska2:#5b391f;
+  --line:rgba(34,22,15,.16); --lineL:rgba(238,237,233,.18);
+  --serif:"Alegreya",Georgia,serif; --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--vapno);color:var(--text);font:400 18px/1.55 var(--serif);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--spagat);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.lbl{font:600 13px/1.2 var(--cond);letter-spacing:.18em;text-transform:uppercase}
+.num{font-family:var(--cond);font-variant-numeric:tabular-nums}
+
+/* pruh */
+.pruh{background:#120b07;color:#e9dccb;font:500 14px/1.35 var(--cond);letter-spacing:.03em;text-align:center;padding:8px 16px}
+.pruh b{color:#fff;font-weight:700}
+
+/* hlavička — ako firemný štít nad dverami */
+.hl{background:var(--dym);color:var(--vapno);border-bottom:1px solid var(--lineL)}
+.hl .wrap{display:flex;align-items:center;gap:28px;min-height:72px}
+.znak{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.znak b{font:700 30px/1 var(--serif);letter-spacing:.01em}
+.znak span{font:600 12px/1 var(--cond);letter-spacing:.22em;text-transform:uppercase;color:var(--spagat)}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a,.hl-tel{font:600 15px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:14px 0;background:linear-gradient(currentColor,currentColor) 0 calc(100% - 8px)/0 1px no-repeat;transition:background-size .2s}
+.nav a:hover,.hl-tel:hover{background-size:100% 1px}
+.hl-tel{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--spagat);padding:13px 18px;border-radius:2px;background:none;color:#fff}
+.hl-tel:hover{background:var(--paprika);border-color:var(--paprika)}
+
+/* hero */
+.hero{background:var(--dym);color:var(--vapno);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;min-height:min(600px,82vh);padding:56px 0 88px}
+.hero h1{font:700 clamp(46px,6.4vw,84px)/.95 var(--serif);letter-spacing:-.01em;margin:18px 0 22px}
+.hero h1 small{display:block;font:600 clamp(18px,1.8vw,22px)/1.2 var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--spagat);margin-bottom:14px}
+.hero .lbl{color:#d9c7b2}
+.cit{font:italic 400 21px/1.5 var(--serif);color:#e8ddd0;max-width:30ch;border-left:2px solid var(--paprika);padding-left:18px}
+.cit cite{display:block;font:500 13px/1.3 var(--cond);font-style:normal;letter-spacing:.14em;text-transform:uppercase;color:#a8927c;margin-top:10px}
+.fakty{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;font:600 16px/1.2 var(--cond);letter-spacing:.08em;text-transform:uppercase}
+.fakty li{list-style:none;display:flex;gap:9px;align-items:center}
+.fakty li::before{content:"";width:7px;height:7px;background:var(--paprika);transform:rotate(45deg)}
+.akcie{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;font:700 16px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:background-color .2s,color .2s}
+.btn-r{background:var(--paprika);color:#fff}.btn-r:hover{background:var(--chili)}
+.btn-o{border:1px solid currentColor}.btn-o:hover{background:var(--vapno);color:var(--dym)}
+
+.foto{position:relative;justify-self:end;width:100%;max-width:560px}
+.foto .ram{border:10px solid var(--dym2);outline:1px solid var(--lineL);overflow:hidden;aspect-ratio:4/4.3}
+.foto img{width:100%;height:100%;object-fit:cover;object-position:56% 60%;transition:transform .5s}
+.foto:hover img{transform:scale(1.045)}
+.foto figcaption{font:500 13px/1.3 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#a8927c;margin-top:12px}
+/* venček paprík — visí zo stropu cez rám fotky */
+.venec{position:absolute;top:-58px;left:-74px;width:150px;height:auto;pointer-events:none;filter:drop-shadow(6px 10px 10px rgba(0,0,0,.45))}
+
+/* obedová tabuľa */
+.tab{position:relative;margin-top:-56px;z-index:2}
+.doska{position:relative;color:#f6eadb;border-radius:4px;padding:46px 52px 42px;
+  background:
+   repeating-linear-gradient(178deg,rgba(0,0,0,0) 0 14px,rgba(0,0,0,.07) 14px 15px,rgba(0,0,0,0) 15px 31px,rgba(255,255,255,.035) 31px 32px),
+   radial-gradient(120% 70% at 30% 20%,rgba(255,220,170,.12),transparent 60%),
+   linear-gradient(180deg,var(--doska1),var(--doska2));
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.25),inset 0 2px 0 rgba(255,255,255,.08),0 22px 40px -18px rgba(29,19,13,.65)}
+.doska::before,.doska::after{content:"";position:absolute;top:18px;width:12px;height:12px;border-radius:50%;background:#2b1a0f;box-shadow:inset 0 2px 2px rgba(0,0,0,.6),0 1px 0 rgba(255,255,255,.12)}
+.doska::before{left:20px}.doska::after{right:20px}
+.doska-g{display:grid;grid-template-columns:1.25fr 1fr;gap:48px}
+.doska h2{font:700 clamp(34px,4.2vw,52px)/1 var(--serif);margin:12px 0 16px;color:#fff3e4;text-shadow:0 1px 0 rgba(0,0,0,.35)}
+.doska .lbl{color:var(--spagat)}
+.doska p{max-width:44ch;color:#ecdcc8}
+.ukazka{margin-top:24px;border:1px dashed rgba(246,234,219,.45);padding:16px 18px;font:500 16px/1.4 var(--cond);letter-spacing:.03em;color:#f1e3d1}
+.ukazka b{font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-right:6px}
+.vypal{display:grid;gap:12px;align-content:start}
+.vypal div{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(246,234,219,.2)}
+.vypal div:first-child{border-top:1px solid rgba(246,234,219,.2)}
+.vypal dt{font:700 22px/1 var(--cond);letter-spacing:.06em;text-transform:uppercase;color:#fff;grid-row:span 2;min-width:4.6em}
+.vypal dd{font:400 16px/1.4 var(--serif);color:#e6d4bf}
+.doska .akcie{margin-top:26px}
+.doska .btn-o:hover{background:#f6eadb;color:var(--doska2)}
+
+/* girlanda — oddeľovač */
+.girl{display:block;width:min(420px,86%);height:auto;margin:64px auto 0;color:var(--text)}
+
+/* oslavy */
+.osl{padding:40px 0 88px}
+.osl .wrap{display:grid;grid-template-columns:minmax(0,470px) 1fr;gap:64px;align-items:center}
+.osl figure{position:relative}
+.osl figure img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .5s}
+.osl .okno{overflow:hidden;border:1px solid var(--line);padding:10px;background:#fff}
+.osl .okno div{overflow:hidden}
+.osl figure:hover img{transform:scale(1.045)}
+.osl h2,.kon h2{font:700 clamp(32px,3.6vw,46px)/1.05 var(--serif);margin:12px 0 18px}
+.osl .lbl{color:var(--paprika)}
+.osl p{max-width:48ch;color:#3b2c22}
+.osl q{font-style:italic}
+.zoz{margin:26px 0 30px;border-top:1px solid var(--line)}
+.zoz li{list-style:none;display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:19px}
+.zoz li span{font:600 14px/1.6 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:right}
+.osl .btn-o{color:var(--text)}.osl .btn-o:hover{background:var(--text);color:var(--vapno)}
+
+/* kontakt */
+.kon{background:var(--dym);color:var(--vapno);padding:80px 0 72px}
+.kon .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
+.kon .lbl{color:var(--spagat)}
+.kon p.adr{font:400 26px/1.35 var(--serif);margin-bottom:26px}
+.kon dl{display:grid;grid-template-columns:auto 1fr;border-top:1px solid var(--lineL)}
+.kon dt,.kon dd{padding:16px 0;border-bottom:1px solid var(--lineL)}
+.kon dt{font:600 14px/1.5 var(--cond);letter-spacing:.16em;text-transform:uppercase;color:#a8927c;padding-right:28px}
+.kon dd a{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.kon dd a:hover{background-size:100% 1px}
+.kon small{display:block;font:500 14px/1.4 var(--cond);letter-spacing:.04em;color:#a8927c;margin-top:4px}
+.kon .akcie .btn-o:hover{background:var(--vapno);color:var(--dym)}
+
+footer{background:#120b07;color:#a8927c;font:500 14px/1.5 var(--cond);letter-spacing:.06em;padding:26px 0 30px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+.lista{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:44px;padding:40px 0 84px;min-height:0}
+  .foto{justify-self:stretch;max-width:none;margin-right:46px;width:auto}
+  .foto .ram{aspect-ratio:4/3}
+  .venec{width:96px;top:-46px;left:auto;right:-50px}
+  .doska{padding:40px 22px 30px}
+  .doska-g,.osl .wrap,.kon .wrap{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  .wrap{width:calc(100% - 32px)}
+  .hl .wrap{min-height:62px}
+  .znak b{font-size:26px}.znak span{display:none}
+  .hl-tel{padding:12px 14px;margin-left:auto}
+  .hl-tel .num{display:none}
+  .hero h1{font-size:50px}
+  .cit{font-size:19px}
+  .akcie .btn{flex:1 1 40%;padding:0 14px}
+  .hide-m{display:none}
+  .doska .akcie .btn{flex:1 1 100%}
+  .hero .wrap{gap:58px}
+  .tab{margin-top:-48px}
+  .vypal dt{font-size:19px}
+  .kon p.adr{font-size:22px}
+  .kon dl{grid-template-columns:1fr}
+  .kon dt{border-bottom:0;padding-bottom:0}
+  .lista{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--dym);border-top:1px solid var(--lineL);padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px}
+  .lista a{min-height:50px;display:flex;align-items:center;justify-content:center;font:700 16px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#fff;border:1px solid var(--spagat);border-radius:2px}
+  .lista a:first-child{background:var(--paprika);border-color:var(--paprika)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="pruh"><b>Neoficiálny návrh</b> — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="pap" viewBox="0 0 40 130">
+      <path d="M20 2c-1 5 1 9 4 12" fill="none" stroke="#5f6b2e" stroke-width="3" stroke-linecap="round"/>
+      <path d="M11 16c3-4 15-4 18 0l-1 5H12z" fill="#5f6b2e"/>
+      <path d="M12 20c-4 10-3 26-1 42 2 18 1 38-2 58-.6 4 3 5 5 2 9-20 15-42 17-62 1.5-14 1-28-2-40z" fill="currentColor"/>
+      <path d="M16 26c-1.5 12-.5 28 0 42" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hl">
+  <div class="wrap">
+    <a class="znak" href="#"><b>Čárda</b><span>reštaurácia · Košice</span></a>
+    <nav class="nav" aria-label="Hlavná navigácia">
+      <a href="#obed">Obedové menu</a><a href="#oslavy">Oslavy</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="hl-tel" href="tel:+421949339820" aria-label="Zavolať do reštaurácie"><span>Zavolať</span><span class="num">0949 339 820</span></a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="lbl">Timonova 7 · centrum Košíc</p>
+      <h1><small>Reštaurácia</small>Čárda</h1>
+      <p class="cit">„Príjemná reštaurácia v&nbsp;centre Košíc, ktorá vám denne ponúka chutné obedové menu…“<cite>— ich popis na menucka.sk</cite></p>
+      <ul class="fakty"><li>Denné obedové menu</li><li>Take away</li><li>Stravenky</li><li>Skupiny 20+</li></ul>
+      <div class="akcie">
+        <a class="btn btn-r" href="#obed">Dnešné menu</a>
+        <a class="btn btn-o" href="tel:+421949339820">Zavolať<span class="num hide-m">&nbsp;+421 949 339 820</span></a>
+      </div>
+    </div>
+    <figure class="foto">
+      <svg class="venec" viewBox="0 0 160 540" aria-hidden="true">
+        <path d="M80 0v40" stroke="#c8a46a" stroke-width="2.5"/>
+        <path d="M80 38c-11 4-11 20 0 22 11-2 11-18 0-22z" fill="none" stroke="#c8a46a" stroke-width="2.5"/>
+        <path d="M80 58v400" stroke="#c8a46a" stroke-width="2"/>
+        <use href="#pap" x="64.1" y="60" width="35.2" height="117.9" color="#6e120c" transform="rotate(7 80 60)"/>
+        <use href="#pap" x="60.5" y="60" width="35.2" height="117.9" color="#d0381f" transform="rotate(-29 80 60)"/>
+        <use href="#pap" x="61.3" y="60" width="33.7" height="112.9" color="#a3190f" transform="rotate(26 80 60)"/>
+        <use href="#pap" x="66.2" y="90" width="32.2" height="108.0" color="#7a140d" transform="rotate(2 80 90)"/>
+        <use href="#pap" x="63.1" y="90" width="32.6" height="109.2" color="#a3190f" transform="rotate(-16 80 90)"/>
+        <use href="#pap" x="61.6" y="90" width="32.7" height="109.6" color="#a8160f" transform="rotate(37 80 90)"/>
+        <use href="#pap" x="63.9" y="125" width="28.5" height="95.4" color="#6e120c" transform="rotate(1 80 125)"/>
+        <use href="#pap" x="65.6" y="125" width="28.3" height="94.9" color="#a3190f" transform="rotate(-33 80 125)"/>
+        <use href="#pap" x="63.8" y="125" width="29.2" height="98.1" color="#94160f" transform="rotate(28 80 125)"/>
+        <use href="#pap" x="67.1" y="153" width="27.7" height="92.9" color="#7a140d" transform="rotate(-1 80 153)"/>
+        <use href="#pap" x="67.4" y="153" width="30.3" height="101.6" color="#c2271a" transform="rotate(-20 80 153)"/>
+        <use href="#pap" x="63.9" y="153" width="29.0" height="97.2" color="#94160f" transform="rotate(38 80 153)"/>
+        <use href="#pap" x="64.2" y="181" width="30.5" height="102.1" color="#6e120c" transform="rotate(-8 80 181)"/>
+        <use href="#pap" x="68.5" y="181" width="28.4" height="95.3" color="#a8160f" transform="rotate(-22 80 181)"/>
+        <use href="#pap" x="61.7" y="181" width="31.3" height="105.0" color="#8a150e" transform="rotate(21 80 181)"/>
+        <use href="#pap" x="67.9" y="217" width="25.8" height="86.5" color="#7a140d" transform="rotate(6 80 217)"/>
+        <use href="#pap" x="64.1" y="217" width="26.8" height="90.0" color="#c8301e" transform="rotate(-13 80 217)"/>
+        <use href="#pap" x="68.7" y="217" width="27.6" height="92.4" color="#7c140e" transform="rotate(25 80 217)"/>
+        <use href="#pap" x="67.5" y="244" width="24.6" height="82.4" color="#6e120c" transform="rotate(4 80 244)"/>
+        <use href="#pap" x="64.1" y="244" width="28.0" height="93.7" color="#d0381f" transform="rotate(-28 80 244)"/>
+        <use href="#pap" x="63.7" y="244" width="28.2" height="94.6" color="#8a150e" transform="rotate(20 80 244)"/>
+        <use href="#pap" x="62.8" y="274" width="28.4" height="95.3" color="#7a140d" transform="rotate(6 80 274)"/>
+        <use href="#pap" x="66.4" y="274" width="28.4" height="95.1" color="#a8160f" transform="rotate(-11 80 274)"/>
+        <use href="#pap" x="69.4" y="274" width="25.5" height="85.6" color="#c2271a" transform="rotate(29 80 274)"/>
+        <use href="#pap" x="66.7" y="305" width="23.7" height="79.6" color="#6e120c" transform="rotate(9 80 305)"/>
+        <use href="#pap" x="66.6" y="305" width="24.3" height="81.4" color="#c2271a" transform="rotate(-23 80 305)"/>
+        <use href="#pap" x="69.0" y="305" width="23.7" height="79.5" color="#a8160f" transform="rotate(18 80 305)"/>
+        <use href="#pap" x="65.5" y="340" width="24.6" height="82.6" color="#7a140d" transform="rotate(6 80 340)"/>
+        <use href="#pap" x="65.0" y="340" width="25.6" height="85.7" color="#8a150e" transform="rotate(-16 80 340)"/>
+        <use href="#pap" x="71.2" y="340" width="22.5" height="75.5" color="#b81e14" transform="rotate(28 80 340)"/>
+        <use href="#pap" x="70.6" y="372" width="24.1" height="80.8" color="#6e120c" transform="rotate(-6 80 372)"/>
+        <use href="#pap" x="69.8" y="372" width="25.0" height="83.9" color="#c2271a" transform="rotate(-33 80 372)"/>
+        <use href="#pap" x="66.5" y="372" width="21.4" height="71.7" color="#94160f" transform="rotate(25 80 372)"/>
+        <use href="#pap" x="68.7" y="399" width="21.7" height="72.6" color="#7a140d" transform="rotate(12 80 399)"/>
+        <use href="#pap" x="69.1" y="399" width="22.1" height="74.0" color="#c2271a" transform="rotate(-11 80 399)"/>
+        <use href="#pap" x="69.9" y="399" width="22.0" height="73.8" color="#c2271a" transform="rotate(27 80 399)"/>
+        </svg>
+      <div class="ram"><img src="assets/obed-na-tanieri.webp" width="1280" height="853" alt="Obed na tanieri — mäso s opekanými zemiakmi, zeleninovou oblohou a dipom" fetchpriority="high"></div>
+      <figcaption>Fotka z ich facebookovej stránky</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="tab" id="obed" aria-labelledby="obed-h">
+  <div class="wrap">
+    <div class="doska">
+      <div class="doska-g">
+        <div>
+          <p class="lbl">Obedová tabuľa</p>
+          <h2 id="obed-h">Denné obedové menu</h2>
+          <p>Čo sa dnes varí, uverejňuje reštaurácia každý deň na menučke a na Facebooku. Na obed sa dá prísť, zobrať si jedlo so sebou alebo zavolať.</p>
+          <p class="ukazka"><b>Ukážka návrhu</b>Sem sa bude každý deň dopĺňať aktuálne menu s cenami — aby ho hostia videli hneď, aj na mobile.</p>
+          <div class="akcie">
+            <a class="btn btn-r" href="https://menucka.sk/denne-menu/kosice/restauracia-carda" rel="noopener" target="_blank">Menu na menucka.sk</a>
+            <a class="btn btn-o" href="https://www.facebook.com/restauraciacardadruzstevna" rel="noopener" target="_blank">Facebook</a>
+          </div>
+        </div>
+        <dl class="vypal">
+          <div><dt>Obed</dt><dd>obedové menu každý deň</dd><dd><span class="num">denne 10:00–13:00</span> — podľa FB, overiť</dd></div>
+          <div><dt>So sebou</dt><dd>take away — jedlo na odnos</dd></div>
+          <div><dt>Stravenky</dt><dd>Cheque Déjeuner, Doxx, Ticket Restaurant</dd></div>
+          <div><dt>Skupiny</dt><dd>kapacita pre skupiny <span class="num">20+</span> osôb</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="girl" viewBox="0 0 420 110" aria-hidden="true">
+  <path d="M4 10q206 60 412 0" fill="none" stroke="#c8a46a" stroke-width="2"/>
+  <g color="#b81e14"><use href="#pap" x="46" y="18" width="22" height="72" transform="rotate(-8 57 22)"/></g>
+  <g color="#7c140e"><use href="#pap" x="104" y="30" width="22" height="72" transform="rotate(6 115 34)"/></g>
+  <g color="#c2271a"><use href="#pap" x="162" y="36" width="22" height="72" transform="rotate(-4 173 40)"/></g>
+  <g color="#a3190f"><use href="#pap" x="199" y="38" width="22" height="76" transform="rotate(2 210 42)"/></g>
+  <g color="#b81e14"><use href="#pap" x="236" y="36" width="22" height="72" transform="rotate(5 247 40)"/></g>
+  <g color="#8a150e"><use href="#pap" x="294" y="30" width="22" height="72" transform="rotate(-6 305 34)"/></g>
+  <g color="#c2271a"><use href="#pap" x="352" y="18" width="22" height="72" transform="rotate(8 363 22)"/></g>
+</svg>
+
+<section class="osl" id="oslavy" aria-labelledby="osl-h">
+  <div class="wrap">
+    <figure>
+      <div class="okno"><div><img src="assets/oslava-prestreta-sala.webp" width="480" height="480" alt="Prestretá sála na oslavu — biele obrusy, sviečky a oranžové mašle na stoličkách" loading="lazy"></div></div>
+    </figure>
+    <div>
+      <p class="lbl">Oslavy a skupiny</p>
+      <h2 id="osl-h">Stôl pre celú rodinu aj firmu</h2>
+      <p>Okrem obedov robí Čárda aj rodinné či firemné oslavy — sála sa prestrie pre väčšiu spoločnosť a o detailoch sa dohodnete priamo s reštauráciou.</p>
+      <ul class="zoz">
+        <li>Rodinné oslavy <span>na dohodu</span></li>
+        <li>Firemné akcie <span>na dohodu</span></li>
+        <li>Skupiny <span class="num">20+ osôb</span></li>
+      </ul>
+      <a class="btn btn-o" href="tel:+421949339820">Dohodnúť oslavu telefonicky</a>
+    </div>
+  </div>
+</section>
+
+<section class="kon" id="kontakt" aria-labelledby="kon-h">
+  <div class="wrap">
+    <div>
+      <p class="lbl">Kontakt</p>
+      <h2 id="kon-h">Kde nás nájdete</h2>
+      <p class="adr">Reštaurácia Čárda<br>Timonova 7<br>040 01 Košice</p>
+      <div class="akcie">
+        <a class="btn btn-r" href="tel:+421949339820">Zavolať</a>
+        <a class="btn btn-o" href="https://www.google.com/maps/search/Re%C5%A1taur%C3%A1cia+%C4%8C%C3%A1rda+Timonova+7+Ko%C5%A1ice" rel="noopener" target="_blank">Mapa a trasa</a>
+      </div>
+    </div>
+    <dl>
+      <dt>Telefón</dt><dd><a class="num" href="tel:+421949339820">+421 949 339 820</a></dd>
+      <dt>Hodiny</dt><dd><span class="num">denne 10:00–13:00</span><small>podľa Facebooku — pred návštevou overiť</small></dd>
+      <dt>Denné menu</dt><dd><a href="https://menucka.sk/denne-menu/kosice/restauracia-carda" rel="noopener" target="_blank">menucka.sk</a></dd>
+      <dt>Facebook</dt><dd><a href="https://www.facebook.com/restauraciacardadruzstevna" rel="noopener" target="_blank">Reštaurácia Čárda</a></dd>
+      <dt>Platba</dt><dd>aj šekové stravenky</dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Neoficiálny návrh webu · webdavid.sk · 2026</span><span>Fotky: facebooková stránka reštaurácie</span></div></footer>
+
+<nav class="lista" aria-label="Rýchle akcie">
+  <a href="tel:+421949339820">Zavolať</a>
+  <a href="https://menucka.sk/denne-menu/kosice/restauracia-carda" rel="noopener" target="_blank">Dnešné menu</a>
+</nav>
+</html>
